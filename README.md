@@ -33,7 +33,10 @@
 - Charles-Henry Clerc ([Charlo75clc](https://github.com/Carlos75clc))
 - Jonas Barth ([Daiki4529](https://github.com/Daiki4529))
 
-## Pour lancer le serveur
-
 > [!NOTE]
-> `npm run start`
+>
+> ## Pour lancer le serveur
+>
+> ```cmd
+> npm run start
+> ```
