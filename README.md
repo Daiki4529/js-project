@@ -36,4 +36,6 @@
 ## Pour lancer le serveur
 
 > [!NOTE]
-> `npm run start`
+> ```cmd
+> npm run start
+> ```
