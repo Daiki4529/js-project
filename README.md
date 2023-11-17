@@ -34,4 +34,7 @@
 - Jonas Barth ([Daiki4529](https://github.com/Daiki4529))
 
 > [!NOTE]
-> `npm run start`
+> ## Pour lancer le serveur
+> ```cmd
+> npm run start
+> ```
