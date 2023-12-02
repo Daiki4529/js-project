@@ -1,5 +1,5 @@
 const { Sequelize } = require("sequelize");
-var config = require("../config/credentials.json");
+var config = require("../config/config.json");
 
 const connection = new Sequelize(
   config.MYSQL_DATABASE,
