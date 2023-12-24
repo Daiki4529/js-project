@@ -7,12 +7,35 @@
 - MySQL 2
 - Sequelize
 
-## Les quatre entités :
+## Les cinqs entités :
 
 - Guild
+  - **id**
+  - name
+  - description
 - Role
+  - **id**
+  - guildId _(foreign key de Guild)_
+  - name
 - User
+  - **username**
+  - nickname
+  - email
+  - password _(hashé avec bcrypt)_
+  - phone
+  - nitro _(date d'expiration)_
 - Message
+  - **id**
+  - content
+  - authorId _(foreign key de User)_
+  - guildId _(foreign key de Guild)_
+- UserRoleGuild
+  - **id**
+  - username _(foreign key de User)_
+  - guildId _(foreign key de Guild)_
+  - roleId _(foreign key de Role)_
+
+<img src="assets/database.png" alt="your-image-description" style="border: 2px solid black; border-radius: 5px;">
 
 ## Cahier des charges
 
@@ -34,7 +57,9 @@
 - Jonas Barth ([Daiki4529](https://github.com/Daiki4529))
 
 > [!NOTE]
+>
 > ## Pour lancer le serveur
+>
 > ```cmd
 > npm run start
 > ```
