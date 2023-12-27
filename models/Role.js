@@ -29,7 +29,5 @@ Role.init(
   }
 );
 
-Role.belongsTo(Guild, { foreignKey: "guildId" });
-Role.hasMany(UserRoleGuild, { foreignKey: "roleId" });
 
 module.exports = Role;

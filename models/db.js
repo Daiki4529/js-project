@@ -1,10 +1,14 @@
 const { Sequelize } = require("sequelize");
-var config = require("../config/config.json");
+var {
+  MYSQL_DATABASE,
+  MYSQL_USERNAME,
+  MYSQL_PASSWORD,
+} = require("../config/config.json");
 
 const connection = new Sequelize(
-  config.MYSQL_DATABASE,
-  config.MYSQL_USERNAME,
-  config.MYSQL_PASSWORD,
+  MYSQL_DATABASE,
+  MYSQL_USERNAME,
+  MYSQL_PASSWORD,
   {
     host: "localhost",
     dialect: "mysql",

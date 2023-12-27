@@ -1,5 +1,6 @@
 {
   "MYSQL_DATABASE": "app",
   "MYSQL_USERNAME": "root",
-  "MYSQL_PASSWORD": "GNIIIIIIIIIIIIIIIIIIIIII"
+  "MYSQL_PASSWORD": "My-Very-Secure-Database-Password!",
+  "JWT_SECRET": "Another-Very-Secure-Json-Web-Token-Password!"
 }
