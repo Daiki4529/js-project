@@ -58,11 +58,10 @@ User.init(
   },
   {
     sequelize: connection,
+    tableName: "User",
   }
 );
 
-User.hasMany(Message, { foreignKey: "authorId" });
-User.hasMany(UserRoleGuild, { foreignKey: "username" });
 User.addHook("beforeCreate", (user) => {
   user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
 });

@@ -26,10 +26,9 @@ Role.init(
   },
   {
     sequelize: connection,
+    tableName: "Role",
   }
 );
 
-Role.belongsTo(Guild, { foreignKey: "guildId" });
-Role.hasMany(UserRoleGuild, { foreignKey: "roleId" });
 
 module.exports = Role;

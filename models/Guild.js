@@ -30,11 +30,8 @@ Guild.init(
   },
   {
     sequelize: connection,
+    tableName: "Guild",
   }
 );
-
-Guild.hasMany(Role, { foreignKey: "guildId" });
-Guild.hasMany(Message, { foreignKey: "guildId" });
-Guild.hasMany(UserRoleGuild, { foreignKey: "guildId" });
 
 module.exports = Guild;

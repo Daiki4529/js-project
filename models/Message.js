@@ -31,10 +31,7 @@ Message.init(
       references: { model: Guild, key: "id" },
     },
   },
-  { sequelize: connection }
+  { sequelize: connection, tableName: "Message" }
 );
-
-Message.belongsTo(User, { foreignKey: "authorId" });
-Message.belongsTo(Guild, { foreignKey: "guildId" });
 
 module.exports = Message;

@@ -45,11 +45,8 @@ UserRoleGuild.init(
   },
   {
     sequelize: connection,
+    tableName: "UserRoleGuild",
   }
 );
-
-UserRoleGuild.belongsTo(User, { foreignKey: "username" });
-UserRoleGuild.belongsTo(Guild, { foreignKey: "guildId" });
-UserRoleGuild.belongsTo(Role, { foreignKey: "roleId" });
 
 module.exports = UserRoleGuild;
