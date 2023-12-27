@@ -1,4 +1,4 @@
-# Projet API RESTUFUL - Discord
+# Projet API RESTFUL - Discord
 
 ## Dépendances
 

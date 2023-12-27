@@ -33,8 +33,4 @@ Guild.init(
   }
 );
 
-Guild.hasMany(Role, { foreignKey: "guildId" });
-Guild.hasMany(Message, { foreignKey: "guildId" });
-Guild.hasMany(UserRoleGuild, { foreignKey: "guildId" });
-
 module.exports = Guild;

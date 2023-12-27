@@ -34,7 +34,4 @@ Message.init(
   { sequelize: connection }
 );
 
-Message.belongsTo(User, { foreignKey: "authorId" });
-Message.belongsTo(Guild, { foreignKey: "guildId" });
-
 module.exports = Message;
