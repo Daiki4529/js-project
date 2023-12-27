@@ -1,4 +1,4 @@
-// routes.js
+// differentes routes
 const express = require('express');
 const router = express.Router();
 const AuthMiddleware = require('./middlewares/AuthMiddleware');
@@ -8,38 +8,38 @@ const RoleController = require('./controllers/RoleController');
 const MessageController = require('./controllers/MessageController');
 const UserRoleGuildController = require('./controllers/UserRoleGuildController');
 
-// Authentification JWT Middleware
+// Authentification JWT
 router.use(AuthMiddleware);
 
-// Routes pour l'entité User
+// Routes des users
 router.get('/users', UserController.getAllUsers);
 router.get('/users/:username', UserController.getUserByUsername);
 router.post('/users', UserController.createUser);
 router.put('/users/:username', UserController.updateUser);
 router.delete('/users/:username', UserController.deleteUser);
 
-// Routes pour l'entité Guild
+// Routes pour les guilds
 router.get('/guilds', GuildController.getAllGuilds);
 router.get('/guilds/:id', GuildController.getGuildById);
 router.post('/guilds', GuildController.createGuild);
 router.put('/guilds/:id', GuildController.updateGuild);
 router.delete('/guilds/:id', GuildController.deleteGuild);
 
-// Routes pour l'entité Role
+// Routes pour les roles
 router.get('/roles', RoleController.getAllRoles);
 router.get('/roles/:id', RoleController.getRoleById);
 router.post('/roles', RoleController.createRole);
 router.put('/roles/:id', RoleController.updateRole);
 router.delete('/roles/:id', RoleController.deleteRole);
 
-// Routes pour l'entité Message
+// Routes pour les messages
 router.get('/messages', MessageController.getAllMessages);
 router.get('/messages/:id', MessageController.getMessageById);
 router.post('/messages', MessageController.createMessage);
 router.put('/messages/:id', MessageController.updateMessage);
 router.delete('/messages/:id', MessageController.deleteMessage);
 
-// Routes pour l'entité UserRoleGuild
+// Routes pour roles des users dans les guilds
 router.get('/userroleguilds', UserRoleGuildController.getAllUserRoleGuilds);
 router.get('/userroleguilds/:id', UserRoleGuildController.getUserRoleGuildById);
 router.post('/userroleguilds', UserRoleGuildController.createUserRoleGuild);
