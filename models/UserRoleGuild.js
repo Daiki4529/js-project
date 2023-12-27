@@ -45,6 +45,7 @@ UserRoleGuild.init(
   },
   {
     sequelize: connection,
+    tableName: "UserRoleGuild",
   }
 );
 

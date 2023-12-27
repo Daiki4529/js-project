@@ -26,6 +26,7 @@ Role.init(
   },
   {
     sequelize: connection,
+    tableName: "Role",
   }
 );
 

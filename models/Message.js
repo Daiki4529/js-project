@@ -31,7 +31,7 @@ Message.init(
       references: { model: Guild, key: "id" },
     },
   },
-  { sequelize: connection }
+  { sequelize: connection, tableName: "Message" }
 );
 
 module.exports = Message;

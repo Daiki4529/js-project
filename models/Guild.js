@@ -30,6 +30,7 @@ Guild.init(
   },
   {
     sequelize: connection,
+    tableName: "Guild",
   }
 );
 

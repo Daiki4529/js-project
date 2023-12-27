@@ -1,20 +1,17 @@
-const { verifyToken } = require("./setupJwt");
+const jwt = require("jsonwebtoken");
+const { JWT_SECRET } = require("../config/config.json");
 
-const authenticateJWT = (req, res, next) => {
-  const token = req.headers.authorization;
-
-  if (!token) {
-    return res.status(401).json({ message: "Unauthorized" });
+module.exports = function (req, res, next) {
+  const authHeader = req.headers.authorization;
+  if (!authHeader) res.sendStatus(401);
+  const [type, token] = authHeader.split(/\s+/);
+  if (type !== "Bearer") res.sendStatus(401);
+  try {
+    const payload = jwt.verify(token, JWT_SECRET);
+    req.userId = payload.sub;
+    next();
+  } catch (e) {
+    res.sendStatus(401);
+    console.error(e);
   }
-
-  const user = verifyToken(token);
-
-  if (!user) {
-    return res.status(403).json({ message: "Forbidden" });
-  }
-
-  req.user = user;
-  next();
 };
-
-module.exports = { authenticateJWT };

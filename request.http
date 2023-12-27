@@ -1,53 +1,65 @@
-GET http://localhost:3000
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ._gLCV0UoUJPMRvhnVkFKraeHgKIp5FB2ptvDyn-RU5k
+
+GET http://localhost:3000/Guild
+Authorization: Bearer {{token}}
 
 ###
-POST http://localhost:3000
+GET http://localhost:3000/User/daiki4529
+Authorization: Bearer {{token}}
+
+###
+POST http://localhost:3000/User
 Content-Type: application/json
 
 {
-    "name": "John"
-}
-###
-PUT http://localhost:3000
-Content-Type: application/json
-
-{
-    "name": "John"
-}
-
-###
-GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsImlhdCI6MTcwMDIyNzc4NywiZXhwIjoxNzA4MDAzNzg3fQ.u0UDUEoCIHysGlf_KlKM4DfA8xtHBNfzo4Non9eF6Ss
-
-###
-POST http://localhost:3000/users
-Content-Type: application/json
-
-{
-    "email": "j5@j.com",
+    "username": "hellowarld",
+    "email": "j5@j.eom",
     "password": "Azerty123!"
 }
 
 ###
-GET http://localhost:3000/users/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsImlhdCI6MTcwMDIyNzc4NywiZXhwIjoxNzA4MDAzNzg3fQ.u0UDUEoCIHysGlf_KlKM4DfA8xtHBNfzo4Non9eF6Ss
-
-###
-PATCH http://localhost:3000/users/3
+PUT http://localhost:3000/User/daiki4529
 Content-Type: application/json
 
 {
-    "password": "Doe23;:42"
+    "username": "daiki4529",
+    "email": "jonasbarth78@gmail.com",
+    "password": "Azerty123!"
+}
+
+###
+POST http://localhost:3000/User
+Content-Type: application/json
+
+{
+    "username": "coucou",
+    "email":"test@test.com",
+    "password":"Azerty123!",
+    "phone": "+33649004822"
+}
+
+###
+GET http://localhost:3000/users/3
+Authorization: Bearer {{token}}
+
+###
+PATCH http://localhost:3000/User/:username
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "username": "daiki4529",
+    "password": "Doe23;:42JBJ2K31421*$"
 }
 
 ###
 DELETE http://localhost:3000/users/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsImlhdCI6MTcwMDIyNzc4NywiZXhwIjoxNzA4MDAzNzg3fQ.u0UDUEoCIHysGlf_KlKM4DfA8xtHBNfzo4Non9eF6Ss
+Authorization: Bearer {{token}}
 
 ###
 PATCH http://localhost:3000/users/7
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsImlhdCI6MTcwMDIyNzc4NywiZXhwIjoxNzA4MDAzNzg3fQ.u0UDUEoCIHysGlf_KlKM4DfA8xtHBNfzo4Non9eF6Ss
+Authorization: Bearer {{token}}
 
 {
     "lastname": "Doe2!1zez31425"

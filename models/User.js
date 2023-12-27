@@ -58,6 +58,7 @@ User.init(
   },
   {
     sequelize: connection,
+    tableName: "User",
   }
 );
 
